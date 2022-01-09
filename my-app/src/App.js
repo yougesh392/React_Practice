@@ -1,17 +1,11 @@
-import { useState } from "react";
 import "./App.css";
-
+import Counter from "./SimpleState/Counter";
+import Notes from "./UseCallBackandMemo/Notes";
 const App = () => {
-  const [count, setCount] = useState(0);
-
-  const Counter = () => {
-    setCount(count + 1);
-  };
-
   return (
     <div className="App">
-      {count}
-      <button onClick={Counter}>Click Me</button>
+      {/* <Counter /> */}
+      <Notes />
     </div>
   );
 };
