@@ -13,17 +13,19 @@ const processReq = (response) => {
   });
 };
 
-// makeReq("Google")
-//   .then((response) => {
-//     console.log("Response resolved");
-//     return processReq(response);
-//   })
-//   .then((processResponse) => {
-//     console.log(processResponse);
-//   })
-//   .catch((err) => {
-//     console.error(err);
-//   });
+//promise chaining.
+makeReq("Google")
+  .then((response) => {
+    console.log("Response resolved");
+    return processReq(response);
+  })
+  .then((processResponse) => {
+    console.log(processResponse);
+  })
+  .catch((err) => {
+    console.error(err);
+  });
+
 const doWork = async () => {
   //replacement of promise chaining
   //to catch the errors use try catch block
