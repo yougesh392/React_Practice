@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
+import Hello from "./Hello";
 
 export default function useEffectHook() {
   const [count, setCount] = useState(0);
+  const [showHello, setShowHello] = useState(false);
   useEffect(() => {
     //updates the document using the browser API
     document.title = `you clicked ${count} times`;
@@ -17,7 +19,16 @@ export default function useEffectHook() {
       >
         Click me.
       </button>
-      <div>Hello again</div>
+      <div>
+        <button
+          onClick={() => {
+            setShowHello(!showHello);
+          }}
+        >
+          Toggle
+        </button>
+        {showHello && <Hello />}
+      </div>
     </div>
   );
 }
