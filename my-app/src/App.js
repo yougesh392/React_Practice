@@ -9,7 +9,8 @@ import UseReducer from "./UseReducer";
 import UseMemo from "./UseMemo";
 import FormUsage from "./UseStateCustomHook/usage";
 import LoadingUsage from "./JsonApi/useFetch";
-
+import UseCallBack from "./UseCallBackandMemo/UseCallBack";
+import UseLayoutEffect from "./UserLayoutEffect";
 const App = () => {
   return (
     <div className="App">
@@ -26,6 +27,8 @@ const App = () => {
       <FormUsage />
 
       <LoadingUsage /> */}
+      <UseCallBack />
+      <UseLayoutEffect />
     </div>
   );
 };

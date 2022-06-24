@@ -1,5 +1,5 @@
 import { useState, useMemo } from "react";
-
+//really expensive component to compute
 const fibonacci = (n) => {
   if (n <= 1) {
     return 1;
